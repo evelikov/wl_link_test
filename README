@@ -1,0 +1,12 @@
+What/why/who
+
+This is a simple binary/library combo to demonstrate the following, wrt the
+introduction of wayland-util:
+ - The util library is implicitly pulled (NEEDED in the final binary)
+ - Explicitly using the util API libraries while linking against client/server
+does not produce any warnings.
+ - Other ?
+
+The following flags were used to prod the linker to produce extra warnings.
+LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro"
+
