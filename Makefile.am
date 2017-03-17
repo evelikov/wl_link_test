@@ -12,3 +12,7 @@ libwl_link_test_la_LDFLAGS = \
 	-no-version-info \
 	-no-undefined \
 	-Wl,--no-undefined
+
+bin_PROGRAMS = wl-dl-test
+wl_dl_test_SOURCES = dltest.c
+wl_dl_test_LDADD = -ldl
